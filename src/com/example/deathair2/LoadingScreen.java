@@ -13,11 +13,14 @@ public class LoadingScreen extends Screen {
     public void update(float deltaTime) 
     {
     	 Graphics g = game.getGraphics();
-    	 //Assets.background = g.newPixmap("background.png", PixmapFormat.RGB565);
+    	 Assets.backgroundMenu = g.newPixmap("falling.png", PixmapFormat.RGB565);
+    	 Assets.background = g.newPixmap("sky.png", PixmapFormat.RGB565);
     	 Assets.player = g.newPixmap("player.png", PixmapFormat.RGB565);
-    	 //Assets.crate = g.newPixmap("crate.png", PixmapFormat.RGB565);
+    	 Assets.crate = g.newPixmap("crate.png", PixmapFormat.RGB565);
+    	 Assets.ready = g.newPixmap("ready.png", PixmapFormat.ARGB4444);
+    	 Assets.play = g.newPixmap("Play.png", PixmapFormat.RGB565);
     	 //Settings.load(game.getFileIO());
-         game.setScreen(new GameScreen(game));
+         game.setScreen(new MainMenuScreen(game));
     }
     
     public void present(float deltaTime) {

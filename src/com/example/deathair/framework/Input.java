@@ -48,6 +48,14 @@ public interface Input {
             builder.append(y);
             return builder.toString();
         }
+
+		public float getX() {
+			return x;
+		}
+
+		public float getY() {
+			return y;
+		}
     }
 
     public boolean isKeyPressed(int keyCode);
